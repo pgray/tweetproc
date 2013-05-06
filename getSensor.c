@@ -1,8 +1,6 @@
-/**********************************/
-/*                                */
-/*    Must install lm_sensors     */
-/*                                */
-/**********************************/
+//** rememeber to install lm-sensors
+//** requires openssl dev lib
+//** requires oauth dev lib
 
 #include <stdio.h>
 #include <stdlib.h>
