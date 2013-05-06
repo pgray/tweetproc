@@ -1,6 +1,7 @@
 //** rememeber to install lm-sensors
 //** requires openssl dev lib
 //** requires oauth dev lib
+//** ONLY WORKS ON MY SONY LAPTOP FOR DEMO PURPOSE
 
 #include <stdio.h>
 #include <stdlib.h>
