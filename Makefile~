@@ -1,0 +1,2 @@
+all:
+	gcc -lssl -loauth -ltokyocabinet -o oauth oauth.c
