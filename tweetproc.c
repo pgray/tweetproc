@@ -5,14 +5,12 @@
 
 	example: ./tweetproc username password
 */
-
-#include <stdio.h>
-#include <oauth.h>
+#include "postFunctions.h"
 
 int main(int argc, char **argv)
 {
   
-
+	post("This is a tweet from tweetproc.c");
 
 
 	return 0;

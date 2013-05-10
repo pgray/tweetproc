@@ -39,6 +39,6 @@ int twitter_post(const char *owner, const char *text) {
 }
  
 int main() {
-  twitter_post("CPU", "Not Available.");
+  twitter_post("PG", "Hopefully we get this stuff done pretty quickly");
   return 0;
 }
