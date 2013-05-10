@@ -7,7 +7,7 @@
 */
 
 #include <stdio.h>
-#include "postFunctions.h"
+#include <oauth.h>
 
 int main(int argc, char **argv)
 {
