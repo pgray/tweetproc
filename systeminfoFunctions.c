@@ -1,6 +1,5 @@
 //** requires lm_sensors
-//** ONLY WORKS ON MY FUJITSU LAPTOP FOR DEMO PURPOSE
-
+//** parsetemp ONLY WORKS on Fujitsu Liftbook T731 and Sony Vaio TZ28-GNX FOR DEMO PURPOSE
 
 #include "systeminfoFunctions.h"
 
@@ -52,7 +51,7 @@ void getTemp(char *temp){
 	strncpy(temp, cpu, strlen(cpu));
 }
 
-//** broken
+
 char* parseTemp(){
 	char temp[BUF_SIZE];
 	getTemp(temp);
@@ -79,8 +78,7 @@ char* parseUptime(){
 	char temp[BUF_SIZE];
 	getTime(temp);
 	char* uptime = temp;
-	//uptime = uptime + 14;
-	uptime = strstr(uptime, "up") + 2;
+	uptime = strstr(uptime, "up") + 4;
 	for(i = 0; i < sizeof(uptime); i++){
     		if(uptime[i] == ','){
       			uptime[i] = '\0';
