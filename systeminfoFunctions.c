@@ -2,7 +2,7 @@
 //** ONLY WORKS ON MY FUJITSU LAPTOP FOR DEMO PURPOSE
 
 
-#include "getSensor.h"
+#include "systeminfoFunctions.h"
 
 void getTime(char *temp){
 
