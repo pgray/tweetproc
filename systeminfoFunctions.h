@@ -1,5 +1,5 @@
-#ifndef __GETSENSOR_H__
-#define __GETSENSOR_H__
+#ifndef __SYSTEMINFOFUNCTIONS_H__
+#define __SYSTEMINFOFUNCTIONS_H__
 
 #include <stdio.h>
 #include <stdlib.h>
