@@ -9,7 +9,7 @@
 #include <ctype.h>
 #include <oauth.h>
 #include <tcutil.h>
-#include "getSensor.h"
+#include "systeminfoFunctions.h"
  
 int twitter_post(const char *owner, const char *text) {
  
