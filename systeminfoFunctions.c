@@ -56,14 +56,22 @@ void getTemp(char *temp){
 char* parseTemp(){
 	char temp[BUF_SIZE];
 	getTemp(temp);
+	int i;
 	char* cputemp = temp;
-	char* coretemp = strstr(cputemp, "Core 0");
-  	char* core0;
-  	
-	char*result = malloc(sizeof(char *));
-	strncpy(result, core0, strlen(core0));
+	cputemp = strstr(cputemp, "Core 0:") + strlen("Core 0:");
+	cputemp = strstr(cputemp, "+");
+	for(i = 0; i < sizeof(cputemp); i++){
+    		if(cputemp[i] == 'C'){
+      			cputemp[i+1] = '\0';
+      			break;
+    		}
+  	}
+	char*result = malloc(BUF_SIZE);
+	strncpy(result, cputemp, strlen(cputemp));
+	result[strlen(cputemp)] = 0;
 	printf("CPU: %s\n", result);
 	return result;
+	//free(result);
 }
 
 char* parseUptime(){
@@ -80,10 +88,11 @@ char* parseUptime(){
     		}
   	}
 
-	char*result = malloc(sizeof(char*));
+	char*result = malloc(BUF_SIZE);
 	strncpy(result, uptime, strlen(uptime));
 	printf("Up: %s\n", result);
 	return result;
+	//free(result);
 }
 
 char *parseLoadtime(){
@@ -98,10 +107,11 @@ char *parseLoadtime(){
       			break;
     		}
   	}
-	char *result = malloc(sizeof(char*));
+	char *result = malloc(BUF_SIZE);
 	strncpy(result,load, strlen(load));
 	printf("Load: %s\n", result);
 	return result;
+	//free(result);
 }
 
 

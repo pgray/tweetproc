@@ -8,10 +8,13 @@
 #include "postFunctions.h"
 
 int main(int argc, char **argv)
-{
-  
-	post("This is a tweet from tweetproc.c");
-
+{ 	  	
+	char *uptime = parseUptime();
+	post(uptime);
+	char *load = parseLoadtime();
+	post(load);
+  	char *CPU = parseTemp();
+	post(CPU);
 
 	return 0;
 }

@@ -5,15 +5,16 @@
 
 	example: ./tweetproc username password
 */
-
-#include <stdio.h>
 #include "postFunctions.h"
 
 int main(int argc, char **argv)
 {
-  
+  	char *uptime = parseUptime();
+  	//char *CPU = parseTemp();
+  	char *load = parseLoadtime();
 
-
+	post(load);
+	post(uptime);
 
 	return 0;
 }
