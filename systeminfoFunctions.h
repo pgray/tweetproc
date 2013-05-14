@@ -1,3 +1,6 @@
+/*
+	contains all library and functions necessary for systeminfoFunctions.c
+*/
 #ifndef __SYSTEMINFOFUNCTIONS_H__
 #define __SYSTEMINFOFUNCTIONS_H__
 

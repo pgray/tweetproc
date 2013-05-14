@@ -1,5 +1,5 @@
 /*
-	This file contains all the helper functions for creating a twitter POST request.
+	This file contains all the helper functions for creating a twitter request.
 */
 
 #include <stdio.h>
@@ -12,6 +12,9 @@
 
 #define NONCE_LENGTH 32
 #define NONCE_CHARS 62
+#define BUF_SIZE 512
+#define MSG_SIZE 140
+#define POST_SIZE 100
 /*
 void createnonce(char[NONCE_LENGTH]);
 */

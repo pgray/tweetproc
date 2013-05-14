@@ -1,5 +1,8 @@
-//** requires lm_sensors
-//** parsetemp ONLY WORKS on Fujitsu Liftbook T731 and Sony Vaio TZ28-GNX FOR DEMO PURPOSE
+/*
+	requires lm_sensors. After installing lm_sensors please run sensors-detect to configure lm_sensors
+	parsetemp is tested to work on Fujitsu Liftbook T731 and Sony Vaio TZ28-GNX FOR DEMO PURPOSE
+	If "sensors" command does not show "Core 0", please change Line 61 Core 0 to a desired name that's shown
+*/
 
 #include "systeminfoFunctions.h"
 
@@ -78,7 +81,7 @@ char* parseUptime(){
 	char temp[BUF_SIZE];
 	getTime(temp);
 	char* uptime = temp;
-	uptime = strstr(uptime, "up") + 4;
+	uptime = strstr(uptime, "up") + 2;
 	for(i = 0; i < sizeof(uptime); i++){
     		if(uptime[i] == ','){
       			uptime[i] = '\0';
