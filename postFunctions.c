@@ -5,6 +5,7 @@
 
 #include "postFunctions.h"
 #include "user.h"
+
 /*
 void createnonce(char nonce[NONCE_LENGTH])
 {

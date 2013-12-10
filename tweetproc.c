@@ -27,13 +27,14 @@ int main(void)
 		char *uptime = parseUptime();
 		char *load = parseLoadtime();
   		char *CPU = parseTemp();
+		char *IP = parseIP();
 		checkThreshold(CPU);
 		
 		char postit[POST_SIZE];
-		snprintf(postit, POST_SIZE, "Up: %s, Load: %s, CPU: %s", uptime, load, CPU);
+		snprintf(postit, POST_SIZE, "Up: %s, Load: %s, CPU: %s, IP: %s", uptime, load, CPU, IP);
 		post(postit);
 		
-		sleep(10);
+		sleep(90);
 	}
 	return 0;
 }
